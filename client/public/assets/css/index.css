@@ -1,0 +1,40 @@
+#patrols
+{
+    position: absolute;
+    top:15px;
+    left:15px;
+    border:3px solid black;
+    padding:10px;
+    width:200px;
+}
+#addnote
+{
+    position: absolute;
+    bottom:15px;
+    left:15px;
+    border:3px solid black;
+    padding:10px;
+    width:200px;
+    text-transform:uppercase;
+    font-size:1.3rem;
+    font-weight: bold;
+    text-align:center;
+}
+.patrol
+{
+    padding:5px;
+    margin:3px;
+    border:1px solid black;
+    text-transform:uppercase;
+    font-size:1.3rem;
+    font-weight: bold;
+    text-align:center;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+.map
+{
+    margin: 0 auto;
+}
