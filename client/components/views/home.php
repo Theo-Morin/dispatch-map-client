@@ -18,7 +18,7 @@
         </div>
     </div>
     <div id="maps" onclick="switch_zone(<?= $nomap ?>)">
-        <?php if($nomap){ echo "Sans zones"; }else{ echo "Avec zones"; } ?>
+        <?php if($nomap){ echo "Afficher les zones"; }else{ echo "Masquer les zones"; } ?>
     </div>
     <div id="addtext">
         <input type="text" id="addtexte" placeholder="Ajouter un texte à la punaise..." />
