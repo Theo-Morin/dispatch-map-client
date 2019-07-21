@@ -40,7 +40,7 @@ function delete_point(ev)
 function switch_zone(map)
 {
     if($("svg").length == 0)
-        document.location = './?map=true';
+        document.location = './map/true';
     else
-        document.location = './?map=false';
+        document.location = './map/false';
 }
