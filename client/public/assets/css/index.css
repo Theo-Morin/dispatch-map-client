@@ -1,24 +1,99 @@
 #patrols
 {
     position: absolute;
-    top:15px;
+    top:50px;
     left:15px;
     border:3px solid black;
     padding:10px;
     width:200px;
+    background-color:white;
 }
-#addnote
+#patrols::before
 {
     position: absolute;
-    bottom:15px;
-    left:15px;
-    border:3px solid black;
+    top:-40px;
+    left:-3px;
     padding:10px;
-    width:200px;
-    text-transform:uppercase;
-    font-size:1.3rem;
+    content:'Mes patrouilles';
+    background-color:black;
+    color:white;
+    font-size:1rem;
     font-weight: bold;
     text-align:center;
+    width:150px;
+}
+#maps
+{
+    position: absolute;
+    top:300px;
+    left:15px;
+    padding:10px;
+    background-color:black;
+    border:3px solid black;
+    color:white;
+    font-size:1rem;
+    font-weight: bold;
+    text-align:center;
+    width:200px;
+    cursor:pointer;
+}
+#centre
+{
+    height:1px;
+    width:1px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color:transparent;
+}
+#addtext
+{
+    position: fixed;
+    bottom:15px;
+    left:15px;
+    z-index: 99;
+}
+#addtexte
+{
+    padding:5px;
+    font-family: 'Indie Flower', cursive;
+    font-size:1rem;
+    font-weight: bold;
+    width:350px;
+    border:3px solid black;
+}
+.punaise
+{
+    height:10px;
+    width:10px;
+    z-index:99;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,0%);
+    background-color:red;
+    border:1px solid transparent;
+    border-radius:1000px;
+}
+.textepuce
+{
+    opacity:0.3;
+    max-width:150px;
+    background-color:#FFFFA5;
+    color:blue;
+    padding:5px;
+    font-family: 'Indie Flower', cursive;
+    z-index:98;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,0%);
+    text-align:center;
+}
+.textepuce:hover
+{
+    opacity:0.9;
 }
 .contain .patrol
 {
