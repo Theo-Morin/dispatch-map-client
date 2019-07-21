@@ -62,7 +62,7 @@ function onclick_page(event)
         'text'
     );
     $("#addtexte").val("");
-    document.location.reload(true);
+    setTimeout(function(){ document.location.reload(true); }, 200);
     //console.log(rect.bottom);
 }
 function delete_point(ev)
