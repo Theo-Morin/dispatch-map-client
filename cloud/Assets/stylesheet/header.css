@@ -1,0 +1,35 @@
+header {
+	padding:0;
+	margin:0;
+}
+
+.header {
+	padding:0;
+	margin:0;
+	color:#000;
+}
+
+.header ul {
+	display:inline-block;
+	margin:0;
+	padding:10px;
+	padding-top:20px;
+	padding-bottom:20px;
+	margin-left:10px;
+	margin-right:10px;
+
+	cursor:pointer;
+}
+
+.selected {
+	padding-top:16px;
+	border-top:4px solid #045FB4;
+	color:#045FB4;
+	font-weight:bold;
+}
+
+.noselected:hover {
+	transition: all 0.2s;
+	color:#045FB4;
+	font-weight:bold;
+}
