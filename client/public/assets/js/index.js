@@ -10,6 +10,20 @@ function drop(ev) {
     ev.preventDefault();
     var target = ev.target;
     var data = ev.dataTransfer.getData("text");
+    console.log($("#" + target.id).children('.contain').attr("id"));
+    console.log(data);
+    var zoneuh = $("#" + target.id).children('.contain').attr("id");
+    $.post(
+        './moovePatrouille',
+        {
+            id : data,
+            zone : zoneuh
+        },
+        function(data){
+            console.log(data);
+        },
+        'text'
+    );
     $(target).find(".contain").append(document.getElementById(data));
 }
 function onclick_page(event)
@@ -25,15 +39,44 @@ function onclick_page(event)
     var x3 = x2;
     $(".container").append("<div onclick=\"delete_point('" + y + "" + x + "')\" class=\"punaise\" id=\"" + y + "" + x + "\" style=\"margin-top:" + y2 + "px;margin-left:" + x2 + "px;\"></div>");
     if($("#addtexte").val() != "")
+    {
+        var text = $("#addtexte").val();
         $(".container").append("<div class=\"textepuce\" style=\"margin-top:" + y3 + "px;margin-left:" + x3 + "px;\" id=\"t" + y + "" + x + "\">" + $("#addtexte").val() + "</div>");
+    }
+    else
+        var text = null;
     //alert('Vous avez cliqué au point de coordonnés: ' + x + ', ' + y );
     $("#centre").remove();
     console.log($("#addtexte").val());
+    $.post(
+        './newKey',
+        {
+            id : x +  "" + y,
+            x : x2,
+            y : y2,
+            texte : text
+        },
+        function(data){
+            console.log(data);
+        },
+        'text'
+    );
     $("#addtexte").val("");
+    document.location.reload(true);
     //console.log(rect.bottom);
 }
 function delete_point(ev)
 {
+    $.post(
+        './deleteKey',
+        {
+            id : ev
+        },
+        function(data){
+            console.log(data);
+        },
+        'text'
+    );
     $("#" + ev).remove();
     $("#t" + ev).remove();
 }

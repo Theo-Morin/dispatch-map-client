@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['map'] = isset($_SESSION['map']) ? $_SESSION['map'] : "true";
+$_SESSION['map'] = isset($_SESSION['map']) ? $_SESSION['map'] : "false";
 $nomap = isset($_SESSION['map']) && $_SESSION['map'] == "false" ? true : false;
 
 include('components/models/_mysql.php');
@@ -30,12 +30,43 @@ switch($uc1)
 {
     case "home":
         $include = "components/views/home.php";
+        $undefPatr = Patrouilles::findUndefPatrouilles();
+        $nordPatr = Patrouilles::findNordPatrouilles();
+        $sudPatr = Patrouilles::findSudPatrouilles();
+        $estPatr = Patrouilles::findEstPatrouilles();
+        $ouestPatr = Patrouilles::findOuestPatrouilles();
+        $sudestPatr = Patrouilles::findSudEstPatrouilles();
+        $sudouestPatr = Patrouilles::findSudOuestPatrouilles();
+
+        $punaises = Punaises::findPunaises();
     break;
     case "newKey":
+        $id = isset($_POST['id']) ? htmlspecialchars($_POST['id']) : exit();
+        $x = isset($_POST['x']) ? htmlspecialchars($_POST['x']) : exit();
+        $y = isset($_POST['y']) ? htmlspecialchars($_POST['y']) : exit();
+        $texte = !empty($_POST['texte']) ? htmlspecialchars($_POST['texte']) : null;
+
+        if(Punaises::add($id,$x,$y,$texte))
+        {
+            exit("success");
+        }
     break;
     case "deleteKey":
+        $id = isset($_POST['id']) ? htmlspecialchars($_POST['id']) : exit();
+
+        if(Punaises::delete($id))
+        {
+            exit("success");
+        }
     break;
-    case "movePatrol":
+    case "moovePatrouille":
+        $patrouille = isset($_POST['id']) ? htmlspecialchars($_POST['id']) : exit();
+        $zone = isset($_POST['zone']) ? htmlspecialchars($_POST['zone']) : exit();
+
+        if(Patrouilles::moove($patrouille,$zone))
+        {
+            exit("success");
+        }
     break;
     case "map":
         if($_GET['uc2'] == "true" || $_GET['uc2'] == "false")
