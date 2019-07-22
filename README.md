@@ -3,5 +3,6 @@
 Posts-it, punaises et attribution des patrouilles sur des zones sur la map de Los Santos (GTA 5) pour le serveur AdAstraRP v3 (RossEnCube => Sheriffs)
 ## Screens
 ![Patrouilles sur le zones, les posts-it et les punaises sur la carte](https://cdn.discordapp.com/attachments/490128778987831296/602495024256778240/posts-it.PNG)
+![Version commandé par RossEnCube (-Patrouilles +MapGrande)](https://i.imgur.com/uTjexvH.png)
 ## Crédits
 Développé par Théo "Hunterzzz" M.
