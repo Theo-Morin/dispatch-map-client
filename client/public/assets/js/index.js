@@ -42,7 +42,7 @@ function onclick_page(event)
     var y3 = y2 + 5;
     var x3 = x2;
     var colorpunaise = $('#colorpunaise').val();
-    console.log(colorpunaise);
+    //console.log(colorpunaise);
     $(".container").append("<div onclick=\"delete_point('" + y + "" + x + "')\" class=\"punaise\" id=\"" + y + "" + x + "\" style=\"background-color:" + colorpunaise + ";margin-top:" + y2 + "px;margin-left:" + x2 + "px;\"></div>");
     if($("#addtexte").val() != "")
     {
