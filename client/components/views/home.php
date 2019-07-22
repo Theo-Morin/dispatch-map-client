@@ -1,4 +1,15 @@
-    <center><img class="map" draggable="false" usemap="#image-map" src="./public/assets/img/mapn2.jpg" alt="GTA Map" /></center>
+    <canvas id="myCanvas" draggable="false" width="0" height="0" style="position:absolute;top:0;z-index:3;left:50%;transform:translate(-50%,0);"></canvas>
+    <div id="savecanvs">
+        <?php
+            foreach($dessins as $aze)
+            {
+                echo '<img draggable="false" class="canvasimg" style="position:absolute;top:0;z-index:2;left:50%;transform:translate(-50%,0);" src="' . $aze['image'] . '">';
+            }
+        ?>
+    </div>
+    <center>
+        <img class="map" draggable="false" usemap="#image-map" src="./public/assets/img/mapn2.jpg" alt="GTA Map" />
+    </center>
     <!--<map name="image-map">
         <area target="" alt="Nord" title="Nord" href="#" coords="207,245,234,218,252,202,258,192,268,191,281,183,291,167,297,154,303,136,313,119,327,109,343,96,355,84,368,88,377,95,390,101,398,104,421,107,444,105,462,105,476,113,486,120,494,133,511,141,516,158,524,176,527,190,529,197,540,206,549,221,557,236,557,245,535,258,525,273,518,262,522,247,514,232,494,230,473,238,447,247,428,251,411,252,405,247,405,260,389,264,381,260,373,252,365,248,355,253,340,259,333,262,330,273,329,282,311,286,292,280,276,270,265,263,254,263,254,272,244,273,228,267,212,255" shape="poly">
         <area target="" alt="Ouest" title="Ouest" href="#" coords="205,247,193,257,182,275,175,295,168,312,152,318,133,317,133,328,140,340,153,343,160,352,163,363,157,389,156,402,183,405,195,403,214,396,229,392,245,392,256,388,266,380,277,375,295,368,310,365,325,361,344,352,367,339,367,332,358,322,355,316,337,310,332,291,331,283,319,281,303,282,285,275,275,270,270,262,254,264,251,273,232,269,218,258" shape="poly">

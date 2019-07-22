@@ -8,15 +8,17 @@
     <link rel="stylesheet" type="text/css" href="./public/assets/css/index.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
 	  <!--<script type="text/javascript" src="./public/assets/vendor/maphilight/maphilight.js"></script>-->
 	  <script type="text/javascript" src="./public/assets/js/index.js"></script>
+	  <script type="text/javascript" src="./public/assets/js/draw.js"></script>
     <!--<script type="text/javascript">
     $(function() {
 		$('.map').maphilight();
     });
     </script>-->
 </head>
-<body <?php // if($nomap){ echo "onload='$(\"svg\").remove()'"; } ?> ondblclick="onclick_page(event)">
+<body <?php // if($nomap){ echo "onload='$(\"svg\").remove()'"; } ?> onload="InitThis()" ondblclick="onclick_page(event)">
 <div class="container">
   <!--<div id="patrols" ondrop="drop(event)" ondragover="allowDrop(event)">
         <div class="contain" id="null">
@@ -46,6 +48,9 @@
         <?= $map ?>
     </div>-->
     <div id="addtext">
+        <input type="button" onclick="clearArea()" value="Gommer"><br/><br/>
+        <input type="button" onclick="save()" value="Repasser au stylo"><br/><br/>
+        <input type="button" onclick="erase()" value="Changer de carte"><br/><br/>
         <input type="color" id="colorpunaise" value="<?= $_SESSION['color'] ?>"><br/><br/>
         <input type="text" id="addtexte" placeholder="Ajouter un texte à la punaise..." />
     </div>

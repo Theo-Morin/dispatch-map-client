@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 21 juil. 2019 à 20:36
+-- Généré le :  lun. 22 juil. 2019 à 14:24
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `db_dispatch-map`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `dessins`
+--
+
+DROP TABLE IF EXISTS `dessins`;
+CREATE TABLE IF NOT EXISTS `dessins` (
+  `desid` int(11) NOT NULL AUTO_INCREMENT,
+  `image` text,
+  PRIMARY KEY (`desid`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -60,6 +73,7 @@ CREATE TABLE IF NOT EXISTS `punaises` (
   `emplacementx` varchar(50) NOT NULL,
   `emplacementy` varchar(50) NOT NULL,
   `texte` varchar(255) DEFAULT NULL,
+  `color` varchar(7) NOT NULL DEFAULT '#ff0000',
   PRIMARY KEY (`punaid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
