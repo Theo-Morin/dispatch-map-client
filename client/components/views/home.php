@@ -1,9 +1,9 @@
-    <canvas id="myCanvas" draggable="false" width="0" height="0" style="position:absolute;top:0;z-index:3;left:50%;transform:translate(-50%,0);"></canvas>
-    <div id="savecanvs">
+    <canvas onmousedown="if (typeof event.preventDefault != 'undefined') {event.preventDefault();}" onselectstart="return false" id="myCanvas" draggable="false" width="0" height="0" style="position:absolute;top:0;z-index:3;left:50%;transform:translate(-50%,0);"></canvas>
+    <div id="savecanvs" onmousedown="if (typeof event.preventDefault != 'undefined') {event.preventDefault();}" onselectstart="return false">
         <?php
             foreach($dessins as $aze)
             {
-                echo '<img draggable="false" class="canvasimg" style="position:absolute;top:0;z-index:2;left:50%;transform:translate(-50%,0);" src="' . $aze['image'] . '">';
+                echo '<img onmousedown="if (typeof event.preventDefault != \'undefined\') {event.preventDefault();}" onselectstart="return false" draggable="false" class="canvasimg" style="position:absolute;top:0;z-index:2;left:50%;transform:translate(-50%,0);" src="' . $aze['image'] . '">';
             }
         ?>
     </div>
