@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['map'] = "false"; // isset($_SESSION['map']) ? $_SESSION['map'] : "false";
+$_SESSION['color'] = isset($_SESSION['color']) ? $_SESSION['color'] : "#ff0000";
 $nomap = true; //isset($_SESSION['map']) && $_SESSION['map'] == "false" ? true : false;
 
 include('components/models/_mysql.php');
@@ -50,6 +51,7 @@ switch($uc1)
         $texte = !empty($_POST['texte']) ? htmlspecialchars($_POST['texte']) : null;
         $color = !empty($_POST['color']) ? htmlspecialchars($_POST['color']) : null;
 
+        $_SESSION['color'] = $color;
         exit(Punaises::add($id,$x,$y,$texte,$color));
     break;
     case "deleteKey":

@@ -143,8 +143,8 @@
 }
 .textepuce
 {
-    opacity:0.3;
-    max-width:150px;
+    opacity:0.8;
+    max-width:200px;
     background-color:#FFFFA5;
     color:blue;
     padding:5px;
@@ -153,12 +153,13 @@
     position:absolute;
     top:0;
     left:50%;
+    font-size:1.2rem;
     transform: translate(-50%,0%);
     text-align:center;
 }
 .textepuce:hover
 {
-    opacity:0.9;
+    opacity:1;
 }
 .contain .patrol
 {

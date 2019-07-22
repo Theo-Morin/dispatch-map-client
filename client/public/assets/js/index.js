@@ -28,8 +28,12 @@ function drop(ev) {
 }
 function onclick_page(event)
 {
-    var x = event.clientX;
-    var y = event.clientY;
+    var eventDoc = (event.target && event.target.ownerDocument) || document;
+    var doc = eventDoc.documentElement;
+    var scrleft = doc.scrollLeft;
+    var scrtop = doc.scrollTop;
+    var x = event.clientX + scrleft;
+    var y = event.clientY + scrtop;
     $(".container").append("<div id=\"centre\">");
     var element = document.getElementById("centre");
     var rect = element.getBoundingClientRect();
@@ -89,4 +93,9 @@ function switch_zone()
         document.location = './map/true';
     else
         document.location = './map/false';
+}
+
+function loader()
+{
+    $('.map').css('height', document.documentElement.clientHeight);
 }

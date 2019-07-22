@@ -46,6 +46,6 @@
         <?= $map ?>
     </div>-->
     <div id="addtext">
-        <input type="color" id="colorpunaise" value="#ff0000"><br/><br/>
+        <input type="color" id="colorpunaise" value="<?= $_SESSION['color'] ?>"><br/><br/>
         <input type="text" id="addtexte" placeholder="Ajouter un texte à la punaise..." />
     </div>
