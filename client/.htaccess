@@ -1,4 +1,4 @@
-Options +FollowSymlinks -MultiViews
+Options -MultiViews -Indexes
 RewriteEngine on
 
 RewriteRule ^([-a-zA-Z0-9_+]+)$ index.php?uc1=$1 [L]
