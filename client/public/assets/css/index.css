@@ -156,6 +156,8 @@
     font-size:1.2rem;
     transform: translate(-50%,0%);
     text-align:center;
+    overflow-y:hidden;
+    overflow-wrap:break-word;
 }
 .textepuce:hover
 {
