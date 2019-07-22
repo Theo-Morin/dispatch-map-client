@@ -37,7 +37,9 @@ function onclick_page(event)
     var x2 = x - rect.left;
     var y3 = y2 + 5;
     var x3 = x2;
-    $(".container").append("<div onclick=\"delete_point('" + y + "" + x + "')\" class=\"punaise\" id=\"" + y + "" + x + "\" style=\"margin-top:" + y2 + "px;margin-left:" + x2 + "px;\"></div>");
+    var colorpunaise = $('#colorpunaise').val();
+    console.log(colorpunaise);
+    $(".container").append("<div onclick=\"delete_point('" + y + "" + x + "')\" class=\"punaise\" id=\"" + y + "" + x + "\" style=\"background-color:" + colorpunaise + ";margin-top:" + y2 + "px;margin-left:" + x2 + "px;\"></div>");
     if($("#addtexte").val() != "")
     {
         var text = $("#addtexte").val();
@@ -54,7 +56,8 @@ function onclick_page(event)
             id : x +  "" + y,
             x : x2,
             y : y2,
-            texte : text
+            texte : text,
+            color : colorpunaise,
         },
         function(data){
             console.log(data);
@@ -80,7 +83,7 @@ function delete_point(ev)
     $("#" + ev).remove();
     $("#t" + ev).remove();
 }
-function switch_zone(map)
+function switch_zone()
 {
     if($("svg").length == 0)
         document.location = './map/true';

@@ -8,11 +8,44 @@
     <link rel="stylesheet" type="text/css" href="./public/assets/css/index.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script type="text/javascript" src="./public/assets/vendor/maphilight/maphilight.js"></script>
-	<script type="text/javascript" src="./public/assets/js/index.js"></script>
-    <script type="text/javascript">
+	  <!--<script type="text/javascript" src="./public/assets/vendor/maphilight/maphilight.js"></script>-->
+	  <script type="text/javascript" src="./public/assets/js/index.js"></script>
+    <!--<script type="text/javascript">
     $(function() {
 		$('.map').maphilight();
     });
-    </script>
+    </script>-->
 </head>
+<body <?php // if($nomap){ echo "onload='$(\"svg\").remove()'"; } ?> ondblclick="onclick_page(event)">
+<div class="container">
+  <!--<div id="patrols" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="contain" id="null">
+            <?php
+            
+            foreach($undefPatr as $undef)
+            {
+                echo '<div id="' . strtolower($undef['nom']) . '" ondragstart="drag(event)" class="patrol" draggable="true">' . $undef['nom'] . '</div>';
+            }
+            
+            ?>
+            <div id="alpha2" ondragstart="drag(event)" class="patrol" draggable="true">Alpha 2</div>
+            <div id="alpha3" ondragstart="drag(event)" class="patrol" draggable="true">Alpha 3</div>
+            <div id="fox1" ondragstart="drag(event)" class="patrol" draggable="true">Fox 1</div>
+            <div id="fox2" ondragstart="drag(event)" class="patrol" draggable="true">Fox 2</div>
+            <div id="fox3" ondragstart="drag(event)" class="patrol" draggable="true">Fox 3</div>
+        </div>
+    </div>
+    <div id="modules">
+        <div class="contain" id="null">
+            <div id="module1" class="module selected">Configuration n°1</div>
+            <div id="module2" class="module">Configuration n°2</div>
+            <div id="module3" class="module">Configuration n°3</div>
+        </div>
+    </div>
+    <div id="maps" onclick="switch_zone()">
+        <?= $map ?>
+    </div>-->
+    <div id="addtext">
+        <input type="color" id="colorpunaise" value="#ff0000"><br/><br/>
+        <input type="text" id="addtexte" placeholder="Ajouter un texte à la punaise..." />
+    </div>

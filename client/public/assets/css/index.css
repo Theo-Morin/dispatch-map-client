@@ -22,10 +22,75 @@
     text-align:center;
     width:150px;
 }
+.patrol
+{
+    padding:5px;
+    margin:3px;
+    border:1px solid black;
+    text-transform:uppercase;
+    font-size:1rem;
+    font-weight: bold;
+    text-align:center;
+    background-color:white;
+    opacity:0.8;
+}
+.patrol:hover
+{
+    opacity:1;
+}
+
+#modules
+{
+    position: absolute;
+    top:335px;
+    left:15px;
+    border:3px solid black;
+    padding:10px;
+    width:200px;
+    background-color:white;
+}
+#modules::before
+{
+    position: absolute;
+    top:-40px;
+    left:-3px;
+    padding:10px;
+    content:'Map Config';
+    background-color:black;
+    color:white;
+    font-size:1rem;
+    font-weight: bold;
+    text-align:center;
+    width:150px;
+}
+.module
+{
+    padding:5px;
+    margin:3px;
+    border:1px solid black;
+    text-transform:uppercase;
+    font-size:1rem;
+    font-weight: bold;
+    text-align:center;
+    background-color:white;
+    opacity:0.8;
+}
+.module:hover
+{
+    opacity:1;
+    background-color:black;
+    color:white;
+}
+.selected
+{
+    background-color:black;
+    color:white;
+}
+
 #maps
 {
     position: absolute;
-    top:300px;
+    top:485px;
     left:15px;
     padding:10px;
     background-color:black;
@@ -111,22 +176,6 @@
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
-}
-.patrol
-{
-    padding:5px;
-    margin:3px;
-    border:1px solid black;
-    text-transform:uppercase;
-    font-size:1rem;
-    font-weight: bold;
-    text-align:center;
-    background-color:white;
-    opacity:0.8;
-}
-.patrol:hover
-{
-    opacity:1;
 }
 img, .map, map {
     margin:0 auto;

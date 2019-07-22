@@ -10,12 +10,12 @@ class Punaises
         return $req->FetchAll();
     }
 
-    public static function add($id, $x, $y, $texte)
+    public static function add($id, $x, $y, $texte,$color)
     {
-        $req = MySQL::getInstance()->prepare('INSERT INTO punaises(punaid,emplacementx,emplacementy,texte) VALUES(?,?,?,?)');
-        $req->execute(array($id,$x,$y,$texte));
+        $req = MySQL::getInstance()->prepare('INSERT INTO punaises(punaid,emplacementx,emplacementy,texte,color) VALUES(?,?,?,?,?)');
+        $req->execute(array($id,$x,$y,$texte,$color));
 
-        return true;
+        return $color;
     }
 
     public static function delete($id)
