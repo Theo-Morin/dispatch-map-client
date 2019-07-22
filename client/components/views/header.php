@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <title>Dispatch service</title>
+    <title>Mur du PDP</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./public/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./public/assets/css/index.css">
