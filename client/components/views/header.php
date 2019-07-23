@@ -51,7 +51,7 @@
     <div id="addtext">
         <input type="button" onclick="clearArea()" value="Gommer"><br/><br/>
         <input type="button" onclick="save()" value="Repasser au stylo"><br/><br/>
-        <input type="button" onclick="erase()" value="Changer de carte"><br/><br/>
+        <input type="button" onclick="erase()" value="Nouvelle carte"><br/><br/>
         <input type="color" id="colorpunaise" value="<?= $_SESSION['color'] ?>"><br/><br/>
         <input type="text" id="addtexte" style="width:200px;" placeholder="Ajouter un texte à la punaise..." />
     </div>
