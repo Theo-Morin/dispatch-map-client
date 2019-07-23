@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
     <title>Mur du PDP</title>
+    <link rel="icon" type="image/png" href="https://www.stickpng.com/assets/images/58a79dc55ad0fd0b7fdd338a.png">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./public/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./public/assets/css/index.css">
